@@ -1,19 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
 
 
-#get_ipython().system('pip install pyaudio')
 
 
-# In[2]:
-
-
-#get_ipython().system('pip install wave')
-
-
-# In[3]:
 
 
 import pyaudio
@@ -24,7 +12,7 @@ FORMAT = pyaudio.paInt16 #paInt8
 CHANNELS = 2 
 RATE = 44100 #sample rate
 RECORD_SECONDS = 4
-WAVE_OUTPUT_FILENAME = "output11.wav"
+WAVE_OUTPUT_FILENAME = "youraudio1.wav"
 
 p = pyaudio.PyAudio()
 
@@ -40,7 +28,7 @@ frames = []
 
 for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
     data = stream.read(CHUNK)
-    frames.append(data) # 2 bytes(16 bits) per channel
+    frames.append(data)
 
 print("* done recording")
 
