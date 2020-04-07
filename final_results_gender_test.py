@@ -349,7 +349,7 @@ model.compile(loss='categorical_crossentropy', optimizer=opt,metrics=['accuracy'
 
 
 
-cnnhistory=model.fit(x_traincnn, y_train, batch_size=16, epochs=700, validation_data=(x_testcnn, y_test))
+cnnhistory=model.fit(x_traincnn, y_train, batch_size=16, epochs=400, validation_data=(x_testcnn, y_test))
 
 
 
@@ -507,7 +507,7 @@ finaldf.to_csv('Predictions.csv', index=False)
 
 
 
-data, sampling_rate = librosa.load('output10.wav')
+data, sampling_rate = librosa.load('youraudio1.wav')
 
 
 
@@ -527,7 +527,7 @@ librosa.display.waveplot(data, sr=sampling_rate)
 
 
 #livedf= pd.DataFrame(columns=['feature'])
-X, sample_rate = librosa.load('output10.wav', res_type='kaiser_fast',duration=2.5,sr=22050*2,offset=0.5)
+X, sample_rate = librosa.load('youraudio1.wav', res_type='kaiser_fast',duration=2.5,sr=22050*2,offset=0.5)
 sample_rate = np.array(sample_rate)
 mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13),axis=0)
 featurelive = mfccs
