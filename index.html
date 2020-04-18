@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPEECH EMOTION RECOGNITION</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        button
+            {
+          margin: 10px 5px;
+            }
+        li{
+          margin: 10px;
+            }
+        body{
+          width: 90%;
+          max-width: 960px;
+          margin: 0px auto;
+        }
+        #btns{
+          display: none;
+        }
+        h1{
+          margin: 100px;
+        }
+      </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+  </head>
+  <body>
+      <header>
+    <div class="main">
+        <ul>
+            
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+
+            
+
+
+        </ul>
+    
+    <div class="title">
+    <h1> SPEECH EMOTION RECOGNITION </h1></div>
+    <!--p> For now it is supported only in Firefox(v25+) and Chrome(v47+)</p>-->
+    <div class="wrapper">
+    <div id='gUMArea'>
+        <div class="audiobutton" >
+        Record:
+        <input type="radio" name="media" value="audio" checked id='mediaVideo'>Audio</div>
+        <button class="button" class="btn btn-default"  id='gUMbtn' >Request Stream</button>
+    </div>
+    </div>
+
+
+
+    
+    <div id='btns'>
+      <button  class="btn btn-default" id='start'>Start</button>
+      <button  class="btn btn-default" id='stop'>Stop</button>
+    </div>
+    <div>
+      <ul  class="list-unstyled" id='ul'></ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script.js"></script></div>
+</header>
+
+  </body>
+</html>
