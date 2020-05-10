@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  
+  <head>
+    <h1 style="margin-top: 0%;background-color: #0047b3;">Emotion Predictor</h1>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Emotion Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+  body {
+  background-color: #bfbfbf;
+}
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-style: bold;
+  font-size: calc(3.5rem + (5 - 3.5) * (100vw - 32rem)/ (76.8 - 32));
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  
+}
+.hello{
+ background-color: #0047b3; /* Green */
+ border-radius: 50%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-style: italic;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.hello:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+p {
+  font-size: 20px;
+  font-style: italic;
+}
+#formats{
+font-size: 20px;
+font-style: italic;
+}
+#recordingsList{
+font-size: 20px;
+font-style: italic;
+}
+  </style>
+      
+    
+  </head>
+  
+  <body>
+   
+
+    <div id="controls" style="text-align:center">
+     <button id="recordButton" class ="hello">Record</button>
+     <button id="pauseButton" class ="hello" disabled>Pause</button>
+     <button id="stopButton" class ="hello" disabled>Stop</button>
+    </div><br><br>
+    <div id="formats" style="text-align: center;">Format: start recording to see sample rate</div>
+    <p><strong>Recordings:</strong></p>
+    <ol id="recordingsList"></ol>
+    <br><br><br><br>
+      <div> <h2 style="font-weight: 500;text-align: center;">Predicted Emotion Of your Voice sample is </h2></div>
+      <br>
+      <div id="reply" style="font-weight: 400;text-align: center;" >The Response will be shown here</div>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="../static/js/app.js"></script>
+  </body>
+</html>
